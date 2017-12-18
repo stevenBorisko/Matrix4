@@ -114,7 +114,7 @@ private:
 struct Vector4 {
 
 	Vector4();
-	Vector4(const Vector& rhs);
+	Vector4(const Vector4& rhs);
 	Vector4(const double[DIMENSION]);
 	~Vector4();
 
