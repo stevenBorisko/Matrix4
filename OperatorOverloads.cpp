@@ -8,6 +8,10 @@ Matrix4& Matrix4::operator=(const Matrix4& rhs) {
 	return *this;
 }
 
+double* Matrix4::operator[](const size_t& rIndex) const {
+	return (double*)((void*)this->data) + (rIndex << 2);
+}
+
 double* Matrix4::operator[](const size_t& rIndex) {
 	return (data + (rIndex << 2));
 }
@@ -32,6 +36,27 @@ Matrix4 Matrix4::operator*(const Matrix4& rhs) const {
 	return ret;
 }
 
+Vector4 Matrix4::operator*(const Vector4& rhs) const {
+	Vector4 ret;
+	ret[0] = rhs[0] * this->data[0]
+		+ rhs[1] * this->data[1]
+		+ rhs[2] * this->data[2]
+		+ rhs[3] * this->data[3];
+	ret[1] = rhs[0] * this->data[4]
+		+ rhs[1] * this->data[5]
+		+ rhs[2] * this->data[6]
+		+ rhs[3] * this->data[7];
+	ret[2] = rhs[0] * this->data[8]
+		+ rhs[1] * this->data[9]
+		+ rhs[2] * this->data[10]
+		+ rhs[3] * this->data[11];
+	ret[3] = rhs[0] * this->data[12]
+		+ rhs[1] * this->data[13]
+		+ rhs[2] * this->data[14]
+		+ rhs[3] * this->data[15];
+	return ret;
+}
+
 Matrix4 Matrix4::operator*(const double& rhs) const {
 	Matrix4 ret(*this);
 	ret *= rhs;
@@ -42,9 +67,18 @@ Matrix4 Matrix4::operator<<(const Matrix4& rhs) const {
 	return (*this * rhs);
 }
 
+Vector4 Matrix4::operator<<(const Vector4& rhs) const {
+	return (*this * rhs);
+}
+
 Matrix4 Matrix4::operator>>(const Matrix4& rhs) const {
 	return (*this * rhs);
 }
+
+Vector4 Matrix4::operator>>(const Vector4& rhs) const {
+	return (*this * rhs);
+}
+
 
 // BINARY ASSIGN
 

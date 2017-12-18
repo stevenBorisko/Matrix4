@@ -17,12 +17,13 @@ PROGFILES = \
 	Miscellaneous.cpp \
 	OperatorOverloads.cpp \
 	Static.cpp \
+	Vector.cpp \
 	$(NULL)
 
 targets default: $(TARGETS)
 
-$(PROGFILES:.cpp=): main.o Constructors.o Friend.o Miscellaneous.o OperatorOverloads.o Static.o
-	$(CC) -o $(EXEC) main.o Constructors.o Friend.o Miscellaneous.o OperatorOverloads.o Static.o ${LFLAGS}
+$(PROGFILES:.cpp=): main.o Constructors.o Friend.o Miscellaneous.o OperatorOverloads.o Static.o Vector.o
+	$(CC) -o $(EXEC) main.o Constructors.o Friend.o Miscellaneous.o OperatorOverloads.o Static.o Vector.o ${LFLAGS}
 
 depend :
 	makedepend ${PROGFILES}
