@@ -154,6 +154,16 @@ struct Vector4 {
 		// ostream
 	friend std::ostream& operator<<(std::ostream& os, const Vector4& rhs);
 
+	// Miscellaneous
+	void normalize();
+
+	// Friend
+	friend double V_magnitude(const Vector4& vec);
+	friend Vector4 V_normalize(const Vector4& vec);
+	friend double V_distance(const Vector4& vec0, const Vector4& vec1);
+	friend double V_dot(const Vector4& vec0, const Vector4& vec1);
+	friend Vector4 V_cross(const Vector4& vec0, const Vector4& vec1);
+
 	// Transformations
 		// Scale
 	void scale(const double& s);

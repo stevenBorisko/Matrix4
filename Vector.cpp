@@ -131,6 +131,43 @@ std::ostream& operator<<(std::ostream& os, const Vector4& rhs) {
 		<< " " << rhs.data[3]
 		<< " ]";
 }
+
+// Miscellaneous
+
+void Vector4::normalize() {
+	this->scale(1.0 / V_magnitude(*this));
+}
+
+// Friend
+
+double V_magnitude(const Vector4& vec) {
+	return sqrt(V_dot(vec,vec));
+}
+
+Vector4 V_normalize(const Vector4& vec) {
+	Vector4 ret(vec);
+	ret.normalize();
+	return ret;
+}
+
+double V_distance(const Vector4& vec0, const Vector4& vec1) {
+	return V_magnitude(vec1 - vec0);
+}
+
+double V_dot(const Vector4& vec0, const Vector4& vec1) {
+	return (vec0.data[0] * vec1.data[0]
+		+ vec0.data[1] * vec1.data[1]
+		+ vec0.data[2] * vec1.data[2]);
+}
+
+Vector4 V_cross(const Vector4& vec0, const Vector4& vec1) {
+	Vector4 ret;
+	ret.data[0] = vec0.data[1] * vec1.data[2] - vec0.data[2] * vec1.data[1];
+	ret.data[1] = vec0.data[2] * vec1.data[0] - vec0.data[0] * vec1.data[2];
+	ret.data[2] = vec0.data[0] * vec1.data[1] - vec0.data[1] * vec1.data[0];
+	return ret;
+}
+
 // Transformations
 	// Scale
 void Vector4::scale(const double& s) {

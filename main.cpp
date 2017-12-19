@@ -5,14 +5,22 @@
 using namespace std;
 
 int main() {
-	double data[16];
+	double matData[16];
 	for(size_t i = 0;i < 16;++i)
-		data[i] = (double)(i+1);
+		matData[i] = (double)(i+1);
 
-	Matrix4 a(data);
+	Matrix4 a(matData);
 
-	cout << a << endl;
-	//a *= Matrix4();
-	a >>= Matrix4::M_scale(2,3,5);
-	cout << a << endl;
+	cout << "a: " << a << endl;
+
+	double vecData[4];
+	for(size_t i = 0;i < 4;++i)
+		vecData[i] = (double)(i << 1);
+
+	Vector4 b(vecData);
+
+	cout << "b: " << b << endl;
+
+	b.scale(2);
+	cout << b << endl;
 }
