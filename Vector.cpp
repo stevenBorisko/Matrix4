@@ -11,6 +11,18 @@ Vector4::Vector4(const Vector4& rhs) {
 	memcpy(this->data, rhs.data, VECTOR_DATA_SIZE);
 }
 
+Vector4::Vector4(
+	const double& x,
+	const double& y,
+	const double& z,
+	const double& w
+) {
+	this->data[0] = x;
+	this->data[1] = y;
+	this->data[2] = z;
+	this->data[3] = w;
+}
+
 Vector4::Vector4(const double newData[DIMENSION]) {
 	memcpy(this->data, newData, VECTOR_DATA_SIZE);
 }

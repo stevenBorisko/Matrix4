@@ -129,6 +129,12 @@ struct Vector4 {
 	// Constructors
 	Vector4();
 	Vector4(const Vector4& rhs);
+	Vector4(
+		const double& x,
+		const double& y,
+		const double& z,
+		const double& w
+	);
 	Vector4(const double[DIMENSION]);
 	~Vector4();
 
