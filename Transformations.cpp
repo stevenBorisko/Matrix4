@@ -67,11 +67,11 @@ void Matrix4::translateX(const double& t) {
 	this->data[3] += t;
 }
 
-void Matrix4::translateX(const double& t) {
+void Matrix4::translateY(const double& t) {
 	this->data[7] += t;
 }
 
-void Matrix4::translateX(const double& t) {
+void Matrix4::translateZ(const double& t) {
 	this->data[11] += t;
 }
 
