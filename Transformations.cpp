@@ -57,7 +57,7 @@ void Matrix4::scaleZ(const double& s) {
 
 // TRANSLATION
 
-void Matrix4::translate(const double& x, const double& y, const double& x) {
+void Matrix4::translate(const double& x, const double& y, const double& z) {
 	this->data[3] += x;
 	this->data[7] += y;
 	this->data[11] += z;
