@@ -1,0 +1,12 @@
+4-D Matrix and Vector library mainly used for graphics and physics
+
+Makefile setup
+- Include Matrix4's makefile with
+	include Matrix4/Matrix4.mk
+- Add as a prerequisite for your executable target
+	$(MATRIX4_MAIN_OBJ)
+- Add as a prerequisite for your clean target
+	Matrix4Clean
+
+Before compiling, the objectfile directory needs to be created with
+	make Matrix4ObjectDirectory
