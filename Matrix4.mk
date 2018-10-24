@@ -9,7 +9,7 @@ Matrix4ObjectDirectory:
 	mkdir $(MATRIX4_OBJDIR)src/
 	@echo "- - - - Matrix4 ObjectFile directory created - - - -"
 
-_MATRIX4_DEPS := src/Matrix.hpp
+_MATRIX4_DEPS := src/Matrix4.hpp
 MATRIX4_DEPS := $(foreach OBJ,$(_MATRIX4_DEPS),$(MATRIX4_PATH)$(OBJ))
 
 _MATRIX4_SUB_OBJS := \
