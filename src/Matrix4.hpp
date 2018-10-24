@@ -38,8 +38,10 @@ struct Matrix4 {
 	Matrix4 operator*(const Matrix4& rhs) const;
 	Vector4 operator*(const Vector4& rhs) const;
 	Matrix4 operator*(const double& rhs) const;
+			// Right Multiply
 	Matrix4 operator<<(const Matrix4& rhs) const;
 	Vector4 operator<<(const Vector4& rhs) const;
+			// Left Multiply
 	Matrix4 operator>>(const Matrix4& rhs) const;
 	Vector4 operator>>(const Vector4& rhs) const;
 		// Binary Assignment

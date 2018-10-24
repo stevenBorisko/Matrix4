@@ -7,6 +7,7 @@ MATRIX4_OBJDIR := $(MATRIX4_PATH).ObjectFiles/
 Matrix4ObjectDirectory:
 	mkdir $(MATRIX4_OBJDIR)
 	mkdir $(MATRIX4_OBJDIR)src/
+	@echo "- - - - Matrix4 ObjectFile directory created - - - -"
 
 _MATRIX4_DEPS := src/Matrix.hpp
 MATRIX4_DEPS := $(foreach OBJ,$(_MATRIX4_DEPS),$(MATRIX4_PATH)$(OBJ))
@@ -27,9 +28,9 @@ MATRIX4_SUB_OBJS := \
 
 # Main object
 $(MATRIX4_MAIN_OBJ): $(MATRIX4_DEPS) $(MATRIX4_SUB_OBJS)
-	@echo "- - - - BigInteger compiled - - - -"
+	@echo "- - - - Matrix4 compiled - - - -"
 	$(LD) -r $(MATRIX4_LFLAGS) $(MATRIX4_SUB_OBJS) -o $@
-	@echo "- - - - BigInteger linked - - - -"
+	@echo "- - - - Matrix4 linked - - - -"
 
 # Sub objects
 $(MATRIX4_OBJDIR)%.o: $(MATRIX4_PATH)%.cpp
