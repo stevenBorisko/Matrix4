@@ -13,13 +13,13 @@ _MATRIX4_DEPS := src/Matrix4.hpp
 MATRIX4_DEPS := $(foreach OBJ,$(_MATRIX4_DEPS),$(MATRIX4_PATH)$(OBJ))
 
 _MATRIX4_SUB_OBJS := \
-	src/Constructors.cpp \
-	src/Friend.cpp \
-	src/Miscellaneous.cpp \
-	src/OperatorOverloads.cpp \
-	src/Static.cpp \
-	src/Transformations.cpp \
-	src/Vector.cpp
+	src/Constructors.o \
+	src/Friend.o \
+	src/Miscellaneous.o \
+	src/OperatorOverloads.o \
+	src/Static.o \
+	src/Transformations.o \
+	src/Vector.o
 MATRIX4_SUB_OBJS := \
 	$(foreach OBJ,$(_MATRIX4_SUB_OBJS),$(MATRIX4_OBJDIR)$(OBJ))
 
