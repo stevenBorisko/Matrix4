@@ -27,13 +27,13 @@ MATRIX4_SUB_OBJS := \
 # --- Rules ---
 
 # Main object
-$(MATRIX4_MAIN_OBJ): $(MATRIX4_DEPS) $(MATRIX4_SUB_OBJS)
+$(MATRIX4_MAIN_OBJ): $(MATRIX4_SUB_OBJS)
 	@echo "- - - - Matrix4 compiled - - - -"
 	$(LD) -r $(MATRIX4_LFLAGS) $(MATRIX4_SUB_OBJS) -o $@
 	@echo "- - - - Matrix4 linked - - - -"
 
 # Sub objects
-$(MATRIX4_OBJDIR)%.o: $(MATRIX4_PATH)%.cpp
+$(MATRIX4_OBJDIR)%.o: $(MATRIX4_PATH)%.cpp $(MATRIX4_DEPS)
 	$(CC) -c $(MATRIX4_CFLAGS) $< -o $@
 
 # Clean
