@@ -1,5 +1,8 @@
 4-D Matrix and Vector library mainly used for graphics and physics
 
+Yes, I know how to use a for loop.
+They are all unrolled in source for performance consistency.
+
 Makefile setup
 - Include Matrix4's makefile with
 	include Matrix4/Matrix4.mk
@@ -15,7 +18,7 @@ Header file to include:
 	Matrix4/src/Matrix4.hpp
 
 Data structures available from this header file are Matrix4 and Vector4
-Functions available for these structs
+	Functions available for these structs are...
 
 //----------------------------------------------------------------------------//
 // --- struct Matrix4 --- //
