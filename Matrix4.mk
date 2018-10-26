@@ -5,8 +5,8 @@ MATRIX4_LFLAGS :=
 
 MATRIX4_OBJDIR := $(MATRIX4_PATH).ObjectFiles/
 Matrix4ObjectDirectory:
-	mkdir $(MATRIX4_OBJDIR)
-	mkdir $(MATRIX4_OBJDIR)src/
+	mkdir -p $(MATRIX4_OBJDIR)
+	mkdir -p $(MATRIX4_OBJDIR)src/
 	@echo "- - - - Matrix4 ObjectFile directory created - - - -"
 
 _MATRIX4_DEPS := src/Matrix4.hpp
