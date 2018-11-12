@@ -1,6 +1,6 @@
 MATRIX4_PATH := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
 MATRIX4_MAIN_OBJ := $(MATRIX4_PATH)Matrix4.o
-MATRIX4_CFLAGS := -std=c++11 -O3
+MATRIX4_CFLAGS := -std=c++17 -O3
 MATRIX4_LFLAGS :=
 
 MATRIX4_OBJDIR := $(MATRIX4_PATH).ObjectFiles/
