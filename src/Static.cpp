@@ -1,4 +1,4 @@
-#include "Matrix4.hpp"
+#include <Matrix4.hpp>
 
 Matrix4 Matrix4::M_scale(const double& s) {
 	Matrix4 ret;

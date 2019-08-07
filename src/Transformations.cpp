@@ -1,4 +1,4 @@
-#include "Matrix4.hpp"
+#include <Matrix4.hpp>
 
 void Matrix4::scale(const double& s) {
 	this->data[0] *= s;

@@ -1,4 +1,4 @@
-#include "Matrix4.hpp"
+#include <Matrix4.hpp>
 
 Matrix4::Matrix4() {
 	memset(this->data, 0, MATRIX_DATA_SIZE);

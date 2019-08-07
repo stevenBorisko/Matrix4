@@ -1,4 +1,4 @@
-#include "Matrix4.hpp"
+#include <Matrix4.hpp>
 
 Matrix4 M_transpose(const Matrix4& rhs) {
 	Matrix4 ret(rhs);
